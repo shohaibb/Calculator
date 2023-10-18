@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Caveat:wght@700&family=Dosis:wght@600&family=Handjet:wght@300;400;500&family=Lilita+One&display=swap');
+
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Handjet', Times, serif;
+    box-sizing: border-box;
+}
+
+.code-text {
+    font-size: 20px;
+    color: #FFF;
+    text-align: center; 
+    margin-top: 10px;
+    font-family: 'Handjet', sans-serif;
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+    cursor: pointer;
+}
+
+.creator-text {
+    font-size: 20px;
+    color: #FFF;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Handjet', sans-serif;
+    transform: translateY(25px);
+    cursor: default;
+}
+
+.sub-text {
+    font-size: 15px;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Handjet', sans-serif;
+    transform: translateY(25px);
+    cursor: default;
+}
+
+/* background of calculator */
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, #000000, #272727);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.calculator-container {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* border effect for calculator */
+@keyframes wave {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -300% 0;
+    }
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    }
+  }
+  
+  
+  .calculator-border {
+    background: linear-gradient(to right, rgba(48, 255, 144, 1), rgba(237, 45, 237, 1), rgba(201, 152, 38, 1), rgba(48, 255, 230, 1), rgba(48, 255, 144, 1));
+    background-size: 400% 100%; 
+    border-radius: 10px;
+    padding: 2px;
+    display: inline-block;
+    animation: wave 3s linear infinite, glow 2s linear infinite; 
+  }
+  
+
+.calculator {
+    background: linear-gradient(to bottom, #0a0a0a, #212121);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* keys on calculator */
+.calculator form input{
+    border: 2px solid #FFF; 
+    transition: all 0.3s ease;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px,-8px,15px rgba(255, 255, 255, 0.1),5px,5px,15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+.calculator form input:hover {
+    box-shadow: -4px -4px 20px rgba(255, 255, 255, 0.2), 3px 3px 20px rgb(255, 255, 255); /* Reduced shadow for hover */
+}
+
+form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20% 0;
+    color: black;
+
+}
+
+form .display input{
+    text-align: center;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+    cursor: default;
+    background: linear-gradient(to bottom, #626262, #ffffff);
+    color: black;
+    border: #0f1010;
+
+}
+.calculator .equal-button {
+    width: 145px;
+    height: 60px;
+    background: linear-gradient(to bottom, #aeaeae, #ffffff);
+    color: black;
+    border: 2px solid #000000; 
+
+}
+.calculator .operator-button{
+  background: linear-gradient(to bottom, #aeaeae, #ffffff);
+    color: black;
+    border: 2px solid #000000; 
+}
+
+.calculator input.small-text {
+    font-size: 10px;
+}
+.calculator .clear-button {
+    background: linear-gradient(to bottom, #df5b5b, #5c1919);
+    color: white; 
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .calculator form input:active { 
+    animation: pulse 0.2s; 
+  }
+
+  /*stuff for the rainbow header */
+
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #111;
+    
+  }
+  
+  .header-rainbow {
+    width: 100%;  
+    .header {
+      width: 3000px;
+      height: 5px;
+      animation: rotate 3s infinite linear;
+
+    }
+    
+  }
+  
+  @-webkit-keyframes rotate {
+    from {
+      background-position: -3000px;
+    }
+    to { 
+      background-position: 0px;
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      background-position: -3000px;
+    }
+    to { 
+      background-position: 0px;
+    }
+  }
+
+  
+  .gradient {
+  background: -webkit-linear-gradient(left,  rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); 
+  
+  }
+  
+  
+  
+@media (max-width: 768px) {
+  .code-text {
+      transform: translate(0, 0);
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .calculator {
+      padding: 10px;
+  }
+
+  .calculator form input {
+      width: 48px;
+      height: 48px;
+      margin: 5px;
+      font-size: 18px;
+  }
+
+  form .display input {
+      font-size: 35px;
+  }
+
+  .creator-text, .sub-text {
+      font-size: 16px;
+  }
+
+  .calculator .equal-button {
+      width: 125px;
+  }
+}
+
+meta[name="viewport"] {
+  content: "width=device-width, initial-scale=1.0";
+}
+  
+  
+  
